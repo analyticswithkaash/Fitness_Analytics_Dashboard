@@ -18,7 +18,7 @@ st.set_page_config(
 )
 
 # Load cleaned dataset
-df = pd.read_csv("workout _plan.csv"encoding="cp1252")
+df = pd.read_csv("workout _plan.csv",encoding="cp1252")
 
 st.title("💪 Personal Fitness Analytics Dashboard")
 st.write("Explore your workout plan and exercise variations.")
