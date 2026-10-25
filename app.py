@@ -3,13 +3,8 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from groq import Groq
-api_key = st.sidebar.text_input(
-    "Enter Groq API Key",
-    type="password"
-)
-
-if api_key:
-    client = Groq(api_key=api_key)
+api_key = st.secrets["GROQ_API_KEY"]
+client = Groq(api_key=api_key)
 # Page configuration
 st.set_page_config(
     page_title="Fitness Analytics Dashboard",
